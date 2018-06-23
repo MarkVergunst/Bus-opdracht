@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="465.0" prefWidth="905.0" style="-fx-background-color: #3b444b;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mark.bus.Controllers.AdminChildAddController">
+<children>
+    <MenuBar style="-fx-background-color: #FFF;" VBox.vgrow="NEVER">
+        <menus>
+            <Menu mnemonicParsing="false" text="Action">
+                <items>
+                    <MenuItem disable="true" mnemonicParsing="false" text="Boeken toevoegen" />
+                    <MenuItem onAction="#toChange" mnemonicParsing="false" text="Boeken Bewerken/verwijderen" />
+                    <MenuItem mnemonicParsing="false" onAction="#toMain" text="Boeken Ophalen" />
+                    <MenuItem onAction="#toPayView" mnemonicParsing="false" text="Boete Betalen" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+      <StackPane>
+         <children>
+            <GridPane prefHeight="462.0" prefWidth="446.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="203.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="358.0" minWidth="10.0" prefWidth="202.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+               <children>
+                  <TextField fx:id="isbn" stylesheets="@../css/styles.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="titel" stylesheets="@../css/styles.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="ISBN" textFill="WHITE" GridPane.rowIndex="1" />
+                  <Label text="Titel" textFill="WHITE" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#registerBook" prefHeight="25.0" prefWidth="442.0" stylesheets="@../css/buttons.css" text="Boek Registreren" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <Label prefHeight="27.0" prefWidth="275.0" text="Boek registreren in systeem" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+
+                  <Label text="Auteur" textFill="WHITE" GridPane.rowIndex="3" />
+                  <Label text="Uitgever" textFill="WHITE" GridPane.rowIndex="4" />
+                  <Label text="Aantal" textFill="WHITE" GridPane.rowIndex="5" />
+                  <Label text="Boek of E-boek" textFill="WHITE" GridPane.rowIndex="6" />
+                  <ComboBox fx:id="type" prefHeight="25.0" prefWidth="328.0" stylesheets="@../css/styles.css" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <TextField fx:id="auteur" stylesheets="@../css/styles.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="uitgever" stylesheets="@../css/styles.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="aantal" stylesheets="@../css/styles.css" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+               <padding>
+                  <Insets bottom="100.0" left="250.0" right="250.0" top="50.0" />
+               </padding>
+            </GridPane>
+         </children>
+      </StackPane>
+</children>
+</VBox>

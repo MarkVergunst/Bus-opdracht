@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="465.0" prefWidth="905.0" xmlns="http://javafx.com/javafx/8.0.161" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mark.bus.Controllers.BoeteController">
+<children>
+ <MenuBar VBox.vgrow="NEVER">
+   <menus>
+     <Menu mnemonicParsing="false" text="Reserveren">
+       <items>
+         <MenuItem mnemonicParsing="false" onAction="#Reserveren" text="Revervatie maken" />
+         <MenuItem mnemonicParsing="false" onAction="#toReservatonDelete" text="Reservatie Verwijderen" />
+           <MenuItem mnemonicParsing="false" onAction="#toMain" text="Reserveringen Bekijken" />
+       </items>
+     </Menu>
+     <Menu mnemonicParsing="false" text="Openstaande boetes">
+       <items>
+         <MenuItem mnemonicParsing="false" text="Boetes Bekijken" />
+       </items>
+     </Menu>
+       <Menu mnemonicParsing="false" text="Action">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#Quit" text="Quit" />
+               </items></Menu>
+   </menus>
+ </MenuBar>
+ <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <TableView fx:id="boeteTable" prefHeight="349.0" prefWidth="443.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+              <columns>
+                  <TableColumn fx:id="boeteIsbn" prefWidth="75.0" text="ISBN" />
+                  <TableColumn fx:id="boeteTitel" prefWidth="75.0" text="Titel" />
+                  <TableColumn fx:id="boeteUitgever" prefWidth="75.0" text="Uitgever" />
+                  <TableColumn fx:id="boeteAuteur" prefWidth="75.0" text="Auteur" />
+                  <TableColumn fx:id="boeteTelaat" prefWidth="106.0" text="Dagen te laat " />
+                  <TableColumn fx:id="boeteBedrag" prefWidth="111.0" text="Boete" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Label text="Door u openstaande Boetes" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="5.0" />
+      </children>
+ </AnchorPane>
+</children>
+</VBox>
